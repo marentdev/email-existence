@@ -22,7 +22,7 @@ const emailExistence = require("@stationf/email-existence");
 	try {
 		let success = await emailExistence.check("mathieu@stationf.co");
 
-		// With options => custom defaultExhange can avoid to get error 500 with gandi.net mx
+		// With options => custom defaultExchange can avoid to get error 500 with gandi.net mx
 		success = await emailExistence.check("mathieu@stationf.co", {
 			fromEmail: "noreply@stationf.co",
 			timeout: 3000,
