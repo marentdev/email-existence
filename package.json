@@ -12,12 +12,14 @@
     "validation",
     "validator"
   ],
-  "version": "0.2.0",
+  "version": "0.2.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marentdev/email-existence.git"
+    "url": "git+https://github.com/marentdev/email-existence.git"
   },
-  "bugs": "http://github.com/marentdev/email-existence/issues",
+  "bugs": {
+    "url": "http://github.com/marentdev/email-existence/issues"
+  },
   "scripts": {
     "test": "mocha --reporter spec"
   },
@@ -29,5 +31,9 @@
     "eslint-plugin-mocha": "^6.1.1",
     "eslint-plugin-sonarjs": "^0.4.0",
     "eslint-plugin-unicorn": "^11.0.0"
-  }
+  },
+  "homepage": "https://github.com/marentdev/email-existence#readme",
+  "main": "index.js",
+  "dependencies": {},
+  "license": "ISC"
 }
