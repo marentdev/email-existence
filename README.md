@@ -1,4 +1,4 @@
-# email-existence [WIP]
+# email-existence
 
 Checks existence of email addresses
 
@@ -6,7 +6,7 @@ Checks existence of email addresses
 
 To install via npm:
 
-    npm install email-existence
+    npm install @stationf/email-existence
 
 ### Requirements
 
@@ -16,7 +16,7 @@ A valid email address to check the existence of. Use [node-validator](https://gi
 
 *  Check existence:
 ```javascript
-const emailExistence = require("email-existence");
+const emailExistence = require("@stationf/email-existence");
 
 (async ()=> {
 	try {

@@ -4,7 +4,7 @@
     "scippio <scippio@2ants.eu>",
     "marentdev <mathieu@stationf.co>"
   ],
-  "name": "email-existence",
+  "name": "@stationf/email-existence",
   "description": "Checks existence of email addresses",
   "keywords": [
     "email",
