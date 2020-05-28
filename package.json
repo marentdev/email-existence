@@ -1,7 +1,8 @@
 {
   "author": "Nicholas Manousos <nmanousos@gmail.com>",
   "contributors": [
-    "scippio <scippio@2ants.eu>"
+    "scippio <scippio@2ants.eu>",
+    "marentdev <mathieu@stationf.co>"
   ],
   "name": "email-existence",
   "description": "Checks existence of email addresses",
@@ -14,14 +15,19 @@
   "version": "0.1.6",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scippio/email-existence.git"
+    "url": "https://github.com/marentdev/email-existence.git"
   },
-  "bugs": "http://github.com/scippio/email-existence/issues",
+  "bugs": "http://github.com/marentdev/email-existence/issues",
   "scripts": {
     "test": "mocha --reporter spec"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
-    "mocha": "~1.9.0"
+    "mocha": "~1.9.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-jsdoc": "^15.9.2",
+    "eslint-plugin-mocha": "^6.1.1",
+    "eslint-plugin-sonarjs": "^0.4.0",
+    "eslint-plugin-unicorn": "^11.0.0"
   }
 }
