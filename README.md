@@ -15,7 +15,7 @@ A valid email address to check the existence of. Use [node-validator](https://gi
 ## Usage
 
 *  Check existence:
-	```
+	```javascript
 		const emailExistence = require("email-existence");
 		(async ()=> {
 			try {
