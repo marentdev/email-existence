@@ -81,7 +81,10 @@ function checkEmail() {
 			});
 
 			conn.on("data", (data) => {
-				if (data.indexOf("220") === 0 || data.indexOf("250") === 0 || data.indexOf("\n220") !== -1 || data.indexOf("\n250") !== -1) {
+				//Handle *.gouv.fr email and other webserver not taking RCPT command
+				if (data.indexOf("550") === 0 && data.indexOf("Protocol error") > 0) {
+					conn.emit("prompt", data);
+				} else if (data.indexOf("220") === 0 || data.indexOf("250") === 0 || data.indexOf("\n220") !== -1 || data.indexOf("\n250") !== -1) {
 					conn.emit("prompt", data);
 				}
 				else if (data.indexOf("\n550") !== -1 || data.indexOf("550") === 0) {
