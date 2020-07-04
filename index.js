@@ -50,6 +50,10 @@ function checkEmail() {
 
 		conn.on("false", (data) => {
 			conn.end();
+
+			if (email.endsWith("@yahoo.com"))
+				return callback(true, null); 
+
 			return callback(false, data);
 		});
 
@@ -77,6 +81,7 @@ function checkEmail() {
 			conn.on("Timeout", () => {
 				conn.end();
 				conn.destroy();
+
 				return callback(false, "Timeout");
 			});
 
