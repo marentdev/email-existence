@@ -52,7 +52,10 @@ function checkEmail() {
 			conn.end();
 
 			if (email.endsWith("@yahoo.com"))
-				return callback(true, null); 
+				return callback(true, null);
+
+			if (data.startsWith("550 No RDNS entry for"))
+				return callback(true, null);
 
 			return callback(false, data);
 		});
@@ -89,7 +92,8 @@ function checkEmail() {
 				//Handle *.gouv.fr email and other webserver not taking RCPT command
 				if (data.indexOf("550") === 0 && data.indexOf("Protocol error") > 0) {
 					conn.emit("prompt", data);
-				} else if (data.indexOf("220") === 0 || data.indexOf("250") === 0 || data.indexOf("\n220") !== -1 || data.indexOf("\n250") !== -1) {
+				}
+				else if (data.indexOf("220") === 0 || data.indexOf("250") === 0 || data.indexOf("\n220") !== -1 || data.indexOf("\n250") !== -1) {
 					conn.emit("prompt", data);
 				}
 				else if (data.indexOf("\n550") !== -1 || data.indexOf("550") === 0) {
